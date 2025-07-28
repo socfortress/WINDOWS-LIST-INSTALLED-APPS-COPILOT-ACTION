@@ -90,6 +90,7 @@ $FullInventory = @{
     action = "list_installed_programs"
     program_count = $Programs.Count
     programs = $Programs
+    copilot_soar = $true
 }
 $FlaggedOnly = @{
     host = $HostName
