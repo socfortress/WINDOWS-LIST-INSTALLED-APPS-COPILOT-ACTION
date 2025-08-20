@@ -90,7 +90,7 @@ $FullInventory = @{
     action = "list_installed_programs"
     program_count = $Programs.Count
     programs = $Programs
-    copilot_soar = $true
+    copilot_action = $true
 }
 $FlaggedOnly = @{
     host = $HostName
@@ -98,6 +98,7 @@ $FlaggedOnly = @{
     action = "list_installed_programs_flagged"
     flagged_count = ($Programs | Where-Object { $_.flagged_reasons.Count -gt 0 }).Count
     flagged_programs = $Programs | Where-Object { $_.flagged_reasons.Count -gt 0 }
+    copilot_action = $true
 }
 
 Write-Log "Total programs found: $($Programs.Count)"
@@ -112,3 +113,4 @@ $FlaggedOnly   | ConvertTo-Json -Depth 5 -Compress | Out-File -FilePath $ARLog -
 
 $Duration = [int]((Get-Date) - $Start).TotalSeconds
 Write-Log "=== SCRIPT END : duration ${Duration}s ==="
+
