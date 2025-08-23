@@ -1,5 +1,5 @@
 {
-  "copilot_action_name": "WINDOWS-LIST-INSTALLED-APPS-ACTIVERESPONSE",
+  "copilot_action_name": "WINDOWS-LIST-INSTALLED-APPS-COPILOT-ACTION",
   "description": "Enumerates installed programs from HKLM/HKCU (incl. WOW6432Node), flags VPNs, user-scope/AppData installs, unknown publishers, and unsigned uninstall binaries. Outputs NDJSON (summary + per-program) and writes atomically to the Active Response log with .new fallback.",
   "technology": "Windows",
   "icon": "windows",
