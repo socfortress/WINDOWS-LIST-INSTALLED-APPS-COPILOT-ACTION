@@ -1,26 +1,10 @@
 {
   "copilot_action_name": "WINDOWS-LIST-INSTALLED-APPS-COPILOT-ACTION",
-  "description": "Enumerates installed programs from HKLM/HKCU (incl. WOW6432Node), flags VPNs, user-scope/AppData installs, unknown publishers, and unsigned uninstall binaries. Outputs NDJSON (summary + per-program) and writes atomically to the Active Response log with .new fallback.",
+  "description": "Enumerates installed applications from standard HKLM/HKCU uninstall locations (including WOW6432Node), highlighting potential risks such as VPN software, user-scope/AppData installs, unknown publishers, and uninstallers with unsigned binaries. Emits structured NDJSON with a summary and per-application details.",
   "technology": "Windows",
   "icon": "windows",
-  "script_parameters": [
-    {
-      "name": "LogPath",
-      "type": "string",
-      "required": false,
-      "description": "Path to the script’s human-readable log.",
-      "default": "%TEMP%/List-Installed-Apps.log"
-    },
-    {
-      "name": "ARLog",
-      "type": "string",
-      "required": false,
-      "description": "Active Response NDJSON output path (atomic overwrite; falls back to .new if locked).",
-      "default": "C:\\Program Files (x86)\\ossec-agent\\active-response\\active-responses.log"
-    }
-  ],
-  "repo_url": "https://raw.githubusercontent.com/socfortress/WINDOWS-LIST-INSTALLED-APPS-COPILOT-ACTION/refs/heads/main",
+  "repo_url": "https://raw.githubusercontent.com/socfortress/WINDOWS-LIST-INSTALLED-APPS-COPILOT-ACTION/refs/heads/main/List-installed-apps.ps1",
   "script_name": "List-installed-apps.ps1",
   "version": "1.0.0",
-  "last_updated": "2025-08-22T00:00:00Z"
+  "last_updated": "2025-09-09T00:00:00Z"
 }
